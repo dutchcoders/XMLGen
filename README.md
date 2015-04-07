@@ -6,6 +6,13 @@ XMLGen is a tool for generating native Golang types from XML. This automates wha
 
 XMLGen is based on and using code from [JSONGen](https://github.com/bemasher/JSONGen).
 
+## Install (using brew)
+
+```
+brew tap dutchcoders/homebrew-xmlgen
+brew install xmlgen
+```
+
 ## Usage
 
 ```
