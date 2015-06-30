@@ -120,6 +120,15 @@ func TestSanitizier(t *testing.T) {
 		{"title_case", "Title_case", false},
 		{"title case", "TitleCase", false},
 
+		{"userid", "Userid", true},
+		{"user-id", "UserID", true},
+		{"user_id", "UserID", true},
+		{"user id", "UserID", true},
+		{"userid", "Userid", false},
+		{"user-id", "User_id", false},
+		{"user_id", "User_id", false},
+		{"user id", "UserID", false},
+
 		{"123", "_", true},
 		{"123.foo", "Foo", true},
 		{".foo123", "Foo123", true},
